@@ -18,15 +18,8 @@ def index() -> rx.Component:
     return base_page(
         rx.vstack(
             rx.heading("Welcome to PartFinder", size="9"),
-            rx.text(
-                "Get started by editing ",
-                rx.code(f"{config.app_name}/{config.app_name}.py"),
-                size="5",
-            ),
-
             rx.link(
                 rx.button("Create new order"),
-                href="https://reflex.dev/docs/getting-started/introduction/",
                 is_external=True,
             ),
             spacing="5",
