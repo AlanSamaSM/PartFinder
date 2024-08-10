@@ -3,7 +3,10 @@
 import reflex as rx
 
 from rxconfig import config
+
 from .ui.base import base_page
+
+from . import pages 
 
 
 
@@ -14,9 +17,7 @@ class State(rx.State):
 
 
 def index() -> rx.Component:
-    # Welcome Page or initial (Index)
-    return base_page(
-        rx.vstack(
+    my_child=rx.vstack(
             rx.heading("Welcome to PartFinder", size="9"),
             rx.link(
                 rx.button("Create new order"),
@@ -26,8 +27,9 @@ def index() -> rx.Component:
             justify="center",
             min_height="85vh",
         ),
-    )
+    return base_page(my_child)
 
 
 app = rx.App()
 app.add_page(index)
+app.add_page(pages.workorder_page, route='/workorder')
