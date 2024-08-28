@@ -1,8 +1,6 @@
 import reflex as rx
 
-def sidebar_item(
-    text: str, icon: str, href: str
-) -> rx.Component:
+def sidebar_item(text: str, icon: str, href: str) -> rx.Component:
     return rx.link(
         rx.hstack(
             rx.icon(icon),
@@ -74,7 +72,7 @@ def sidebar_bottom_profile() -> rx.Component:
                         rx.icon_button(
                             rx.icon("user"),
                             size="3",
-                            radius="full",
+                            radius="large",
                         ),
                         rx.vstack(
                             rx.box(
@@ -104,9 +102,9 @@ def sidebar_bottom_profile() -> rx.Component:
                     spacing="5",
                 ),
                 spacing="5",
-                position="fixed",
-                left="0px",
-                top="0px",
+                # position="fixed",
+                # left="0px",
+                # top="0px",
                 # z_index="5",
                 padding_x="1em",
                 padding_y="1.5em",
