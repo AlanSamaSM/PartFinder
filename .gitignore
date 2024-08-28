@@ -1,6 +1,6 @@
 *.db
 *.py[cod]
+.conda
 .web
 __pycache__/
 assets/external/
-.conda
