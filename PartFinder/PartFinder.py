@@ -6,7 +6,7 @@ from rxconfig import config
 
 from .ui.base import base_page
 
-from . import pages 
+
 
 
 
@@ -32,4 +32,3 @@ def index() -> rx.Component:
 
 app = rx.App()
 app.add_page(index)
-app.add_page(pages.workorder_page, route='/workorder')
